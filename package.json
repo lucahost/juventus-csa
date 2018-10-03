@@ -1,0 +1,28 @@
+{
+  "name": "juventus",
+  "version": "1.0.0",
+  "description": "Diverse Demo's und Tests für die Schule",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unlockedluca/juventus.git"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Luca Hostettler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unlockedluca/juventus/issues"
+  },
+  "homepage": "https://github.com/Unlockedluca/juventus#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
+}
