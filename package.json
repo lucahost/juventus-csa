@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Diverse Demo's und Tests für die Schule",
   "scripts": {
+    "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
-    "start": "node bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
