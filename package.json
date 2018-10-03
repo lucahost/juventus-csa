@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Diverse Demo's und Tests für die Schule",
   "scripts": {
-    "devstart": "nodemon bin/www",
-    "start": "node bin/www",
+    "devstart": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,5 +38,8 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "serve-favicon": "^2.4.5"
+  },
+  "engines": {
+    "node": "6.11.1"
   }
 }
