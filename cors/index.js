@@ -1,10 +1,10 @@
-express = require('express');
-cors = require('cors');
+// express = require('express');
+// cors = require('cors');
 
-const PORT = process.env.PORT || 3000;
-const app = express();
+// const PORT = process.env.PORT || 3000;
+// const app = express();
 
-//app.use(cors());
+// //app.use(cors());
 
 app.get('/demo', function(req, res) {
   res.json(
@@ -21,6 +21,6 @@ app.get('/demo', function(req, res) {
   );
 });
 
-app.listen(PORT, function() {
-  console.log(`Sever is listening on port ${PORT}`);
-});
+// app.listen(PORT, function() {
+//   console.log(`Sever is listening on port ${PORT}`);
+// });

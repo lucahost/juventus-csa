@@ -1,0 +1,50 @@
+html
+    head
+        title XSS
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+    body
+        block content
+            .main.container
+
+                .row
+                .card.rounded-0
+                .card-header
+                    h3.mb-0 Blog Liste
+                .card-body
+                    .table-responsive
+                        table.table.table-dark
+                            thead
+                                th Creator
+                                th Title
+                                th Content
+                            tbody
+                                each blogentry in bloglist
+                                    tr
+                                        
+                                        td= blogentry.creator
+                                        td
+                                            a(href='/api/xss/blogpost/' + blogentry.id) #{blogentry.subject}
+                                        td
+                                            unescaped!=blogentry.content
+
+                .row
+                .card.rounded-0
+                .card-header
+                    h3.mb-0 Blog Eintrag erstellen
+                .card-body
+                form(method='POST' action='/api/xss/', autocomplete='off', novalidate='')
+                    div.form-group
+                        label(for='username') Username:
+                        input#creator.form-control(type='text' name='creator')
+                    div.form-group
+                        label(for='subject') Titel:
+                        input#subject.form-control(type='text' name='subject')
+                    div.form-group
+                        label(for='content') Inhalt:
+                        input#content.form-control(type='text' name='content')
+                   
+                    button#btnLogin.btn.btn-success.btn-lg.float-right(type='submit') Absenden
+            

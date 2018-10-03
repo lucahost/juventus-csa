@@ -1,0 +1,26 @@
+html
+    head
+        title= title
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        style  
+            include ./../style/style.css
+    body
+        h1= message
+        h2 Übersicht
+            ul#menu
+                li
+                    h2 S2 - CSA
+                    ol
+                        li: a(href="/api/login", title="login") Super secret login page
+                        li: a(href="/api/cors", title="cors") CORS
+                        li: a(href="/api/csrf", title="csrf") CSRF
+                        li: a(href="/api/xss", title="xss") XSS
+                li: h2 S2 - Projektmanagement
+                li: h2 S2 - Prozessortechnik
+                li: h2 S2 - Software Engineering
+
+
+
+

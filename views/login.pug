@@ -1,0 +1,21 @@
+html
+    head
+        title Login
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+        style  
+            include ./../style/signin.css
+    body
+        block content
+            .container
+                form.form-signin(action="/api/login", method="post")
+                    h2.form-signin-heading Please sign in
+                    div.form-group
+                        label(for='username') Username:
+                        input#username.form-control(type='text' name='username')
+                    div.form-group
+                        label(for='password') Password:
+                        input#password.form-control(type='password' name='password')
+                    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
