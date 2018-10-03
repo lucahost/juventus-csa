@@ -12,23 +12,11 @@ exports.cors_get = function (req, res) {
 };
 
 exports.cors_get_simplecors = function (req, res) {
-    request('http://node-cors-server.herokuapp.com/simple-cors', function(error, response, body){
-        let obj = { 
-            "res": JSON.parse(response.body), 
-            "err": JSON.parse(error)
-        };
-        res.send(obj);
-    });
+    res.json({msg: 'This is CORS-enabled for all origins!'})
 };
 
 exports.cors_get_nocors = function (req, res) {
-    request('http://node-cors-server.herokuapp.com/no-cors', function(error, response, body){
-        let obj = { 
-            "res": JSON.parse(response.body), 
-            "err": JSON.parse(error)
-        };
-        res.send(obj);
-    });
+    res.json({msg: 'This CORS-disabled for external origins!'})
 };
 
 
