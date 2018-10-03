@@ -2,7 +2,6 @@
   "name": "juventus",
   "version": "1.0.0",
   "description": "Diverse Demo's und Tests für die Schule",
-  "main": "node bin/www",
   "scripts": {
     "devstart": "nodemon bin/www",
     "start": "node bin/www",
