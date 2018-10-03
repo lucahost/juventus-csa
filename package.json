@@ -4,6 +4,7 @@
   "description": "Diverse Demo's und Tests für die Schule",
   "scripts": {
     "devstart": "nodemon ./bin/www",
+    "prodstart": "node app/bin/www",
     "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
